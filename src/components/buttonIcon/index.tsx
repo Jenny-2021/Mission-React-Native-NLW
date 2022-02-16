@@ -1,22 +1,17 @@
 import React from 'react';
-import {
-    Text,
-    Image,
-    View,
-    TouchableOpacity,
-    TouchableOpacityProps,
-    } from 'react-native';
+import { Text, Image, View } from 'react-native';
+import { RectButton, RectButtonProps } from "react-native-gesture-handler";
 
 import DiscordImg from '../../assets/discord.png';
 import { styles } from './styles';
 
-type props = TouchableOpacityProps & {
+type props = RectButtonProps & {
     title: string;
 }
 
 export function ButtonIcon ({title, ...rest} : props){
     return(
-        <TouchableOpacity 
+        <RectButton 
         style={styles.container}
         {...rest}
         >
@@ -28,6 +23,6 @@ export function ButtonIcon ({title, ...rest} : props){
             <Text style={styles.title}>
                 { title }
             </Text>
-        </TouchableOpacity>
+        </RectButton>
     );
 }
