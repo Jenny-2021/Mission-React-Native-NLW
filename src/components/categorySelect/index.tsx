@@ -1,39 +1,43 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { RectButton, RectButtonProps } from "react-native-gesture-handler";
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 
-import { Categories } from '../../utils/categories';
-import DiscordImg from '../../assets/discord.png';
 import { styles } from './styles';
+import { Categories } from '../../utils/categories';
+
 import { Category } from '../category';
 
-type props = {
-    CategorySelected: string;
-    setCategory: (categoryId:string) => void;
+type Props = {
+  categorySelected: string;
+  setCategory: (categoryId: string) => void;
+  hasCheckBox?: boolean;
 }
 
-export function CategorySelect ({ 
-    CategorySelected, 
-    setCategory 
-} : props){
-    return(
-     <ScrollView
-        horizontal
-        style={styles.container}
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{paddingRight: 40 }}
-     >
-         {
-            Categories.map(category =>(
-                <Category
-                key={category.id}
-                title={category.title}
-                icon={category.icon}
-                checked={ category.id === CategorySelected}
-                onPress={() => setCategory(category.id)}
-                />
-            ))
-         }
-     </ScrollView>
-    );
+export function CategorySelect({ 
+  categorySelected, 
+  setCategory,
+  hasCheckBox = false,
+}: Props){
+  
+  return(
+    <ScrollView
+      horizontal
+      style={styles.container}  
+      showsHorizontalScrollIndicator={false}  
+      contentContainerStyle={{ paddingRight: 40 }}
+    >
+      {
+        Categories.map(category => (
+          <Category 
+            key={category.id}
+            title={category.title}
+            icon={category.icon}
+            checked={category.id === categorySelected}
+            onPress={() => setCategory(category.id)}
+            hasCheckBox={hasCheckBox}
+          />
+        ))
+      }
+    </ScrollView>
+  );
 }

@@ -21,10 +21,10 @@ return (
             <ButtonAdd/>
         </View>
         <View>
-            <CategorySelect
-            CategorySelected="category"
+            <CategorySelect 
+            categorySelected={category}
             setCategory={handleCategorySelect}
-            />
+        />
         </View>
 
     </View>
