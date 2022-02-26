@@ -5,6 +5,7 @@ import { CategorySelect } from "../../components/categorySelect";
 import { Appointment } from "../../components/appointment";
 import { ListDivider } from "../../components/listDivider";
 import { ListHeader } from "../../components/listHeader";
+import { Background } from '../../components/background';
 import { ButtonAdd } from "../../components/buttonAdd";
 import { Profile } from "../../components/profile";
 
@@ -44,7 +45,7 @@ function handleCategorySelect(categoryId : string) {
 }
 
 return (
-    <View>
+    <Background>
         <View style={styles.header}>
             <Profile/>
             <ButtonAdd/>
@@ -70,6 +71,6 @@ return (
             />
         </View>
 
-    </View>
+    </Background>
 );
 }

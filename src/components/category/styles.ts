@@ -15,7 +15,7 @@ export const styles = StyleSheet.create ({
         height: 116,
         borderRadius: 8,
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent:'space-between',
         paddingVertical: 20
       },
       title: {
@@ -36,13 +36,12 @@ export const styles = StyleSheet.create ({
         borderRadius: 3
       },
       checked: {
+        position: 'absolute',
         top: 7,
         right: 7,
         width: 10,
         height: 10,
         backgroundColor: theme.colors.primary,
-        borderRadius: 3,
-        alignSelf:'flex-end',
-        marginRight: 7,
+        borderRadius: 3
       }
     });
