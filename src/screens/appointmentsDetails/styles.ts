@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
-
+import { getBottomSpace } from "react-native-iphone-x-helper";
 export const styles = StyleSheet.create ({
     container: {
         flex: 1,
@@ -8,6 +8,7 @@ export const styles = StyleSheet.create ({
     banner: {
         width:'100%',
         height: 234,
+        marginBottom: 30
     },
     bannercontent: {
         flex: 1,
@@ -24,5 +25,14 @@ export const styles = StyleSheet.create ({
         fontFamily:theme.fonts.text400,
         fontSize: 13,
         color:theme.colors.heading
+    },
+    members:{
+        marginLeft: 24,
+        marginTop: 27,
+    },
+    footer: {
+      paddingHorizontal: 24,
+      paddingVertical: 20,
+      marginBottom: getBottomSpace(),   
     },
 })
