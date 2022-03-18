@@ -5,6 +5,7 @@ import { theme } from "../global/styles/theme";
 
 import { Home } from "../screens/home";
 import { AppointmentsDetails } from "../screens/appointmentsDetails";
+import { AppointmentsCreate } from "../screens/appointmentsCreate";
 import { Signin } from "../screens/signin";
 
 
@@ -32,6 +33,10 @@ export function AuthRoutes () {
             <Screen
             name= "AppointmentsDetails"
             component={AppointmentsDetails}
+            />
+            <Screen
+            name= "AppointmentsCreate"
+            component={AppointmentsCreate}
             />
 
         </Navigator> 

@@ -53,12 +53,15 @@ function handleCategorySelect(categoryId : string) {
 function handleAppointmentDetails() {
     navigation.navigate( 'AppointmentsDetails' );
 }
+function handleAppointmentCreate() {
+    navigation.navigate( 'AppointmentsCreate' );
+}
 
 return (
     <Background>
         <View style={styles.header}>
             <Profile/>
-            <ButtonAdd/>
+            <ButtonAdd onPress={handleAppointmentCreate}/>
         </View>
             <CategorySelect 
             categorySelected={category}
